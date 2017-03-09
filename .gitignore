@@ -1,4 +1,4 @@
 /artSite
 /py/static/*
 !/py/static/style
-
+/py/__pycache__
