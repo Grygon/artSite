@@ -1,0 +1,54 @@
+body {
+	background-color:#303030;
+}
+
+#header {
+	height: 142px;
+	padding-bottom:40px;
+
+	position: absolute;
+	left: 18%;
+
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+h1.header {
+	font-size:72;
+	color: #14bcc6;
+}
+
+h2.header {
+	font-size:36;
+	color:#555555;
+}
+
+#sidebar {
+	color:#555555;
+
+	position:absolute;
+	left:3%;
+	top:182px;
+	height: 100%;
+
+	width: 10.5%;
+
+	padding-left:3%;
+	padding-right:3%;
+
+	margin-right: 20px;
+
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+#content {
+
+	position: absolute;
+
+	left: 16.5%;
+	top: 200px;
+
+}

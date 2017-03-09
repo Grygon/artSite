@@ -1,0 +1,51 @@
+body {
+	background-color:#303030;
+}
+
+#header {
+	height:182px;
+	padding-bottom:40px;
+
+	position: absolute;
+	left:16.5%;
+
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+#main {
+	position: absolute;
+	margin-left: 18%;
+	margin-top:182px;
+
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+.header h1 {
+	font-size:72;
+	color: #14bcc6;
+}
+
+.header h2 {
+	font-size:36;
+	color:#555555;
+}
+
+#sidebar {
+	color:#555555;
+
+	height:100%;
+	width:16.5%;
+	
+	position:fixed;
+	padding-left:3%;
+	padding-right:3%;
+	padding-top:182px;
+}
+
+#content {
+	position: relative;
+}
