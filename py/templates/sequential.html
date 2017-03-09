@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+
+<style>
+
+.comicIcon {
+	position:absolute;
+	top:75px;
+	left:80px;
+	width:300px;
+	height:300px;
+}
+
+.comic2 {
+	left:500px;
+}
+
+.comicIcon img,a {
+	width:100%
+}
+
+</style>
+
+<div class="comicIcon comic1">
+	<a href="{{ url_for("comics",page="comic1") }}">
+		<img src="{{icon1}}">
+	</a>
+	The Road Not Taken: Khan-Garuda
+</div>
+
+<div class="comicIcon comic2">
+	<a href="{{ url_for("comics",page="comic2") }}">
+		<img src="{{icon2}}">
+	</a>	
+	Last Night
+</div>
+
+
+
+{% endblock %}
