@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/full.css') }}"/>
+
+{% for d in data %}
+{% if d is string %}
+<div class="text">
+	{{d}}
+</div>
+{% else %}
+<div class="imageBox">
+	{% for f in d %}
+	<div class="image">
+		<img src="{{f}}">
+	</div>
+	{% endfor %}
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}

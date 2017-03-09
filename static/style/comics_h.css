@@ -1,0 +1,57 @@
+
+
+#mainImg {
+	position:absolute;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+}
+
+.title {
+	position:relative;
+	top:30px;
+	left:40px;
+}
+
+.viewer {
+	position:absolute;
+	top:86px;
+	left:70px;
+	width:900px;
+	height:633px;
+}
+
+.viewer img {
+	width:100%;
+}
+
+.tiles {
+	position:absolute;
+	top:680px;
+	left:0%;
+	width:1050px;
+	margin-top:56px;
+	margin-left:5px;
+	display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+	flex-wrap:wrap;
+}
+
+.tile {
+	margin:30px 0px 30px 15px;
+	width:133px;
+	height:100px;
+}
+
+.tile a img {
+	width:133px;
+	height:100px;
+}
+
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}

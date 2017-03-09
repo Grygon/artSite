@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+{% block content %}
+
+<!-- Shhh. I won't tell if you don't -->
+{% if page == "comic1" %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/comics_h.css') }}"/>
+<div class=title>
+	The Road Not Taken: Khan-Garuda 
+</div>
+{% else %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/comics.css') }}"/>
+<div class=title>
+	Last Night
+</div>
+{% endif %}
+
+
+<div class=viewer>
+	<img id="mainImg" src="{{images[num-1]}}" >
+</div>
+
+<div class="tiles image-link"> 
+	{% for i in range(images|length) %}
+	
+	<div class="tile">
+		<a href="{{ url_for("comics",page=page,num=i+1) }}">
+			<img {% if i+1 == num %}
+			class= "transparent"
+			{% endif %}
+				src="{{images[i]}}">
+		</a>
+	</div>
+	{% endfor %}
+</div>
+
+
+
+
+{% endblock %}
