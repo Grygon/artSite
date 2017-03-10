@@ -4,6 +4,6 @@ with open(activate_this) as file_:
 
 import sys
  
-sys.path.insert(0,'/home/grygon/artSite/py/')
+sys.path.insert(0,'/home/grygon/artSite/')
  
 from main import app as application
