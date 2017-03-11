@@ -1,22 +1,51 @@
 
 
-#mainImg {
-	position:absolute;
-	border-style:solid;
-	border-width:1px;
-	border-color:black;
-}
-
 .title {
 	position:relative;
 	top:30px;
 	left:40px;
 }
 
-.viewer {
-	position:absolute;
+img#mainImg {
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	width:100%;
+}
+
+.lArrow {
+	width:20px;
+	margin-right:3px;
+}
+
+.lArrow img {
+	width:20px;	
+}
+
+.rArrow {
+	width:20px;
+	margin-left:3px;
+}
+
+.rArrow img {
+	width:20px;	
+}
+
+
+.imgBrowser {
+	position:relative;
 	top:86px;
 	left:70px;
+	width:900px;
+	height:633px;
+	display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+	align-items: center;
+}
+
+.viewer {
 	width:900px;
 	height:633px;
 }

@@ -15,7 +15,7 @@ def hello():
 # Creates a simple page with text in the "content" space. Reads from static/text/<page>.txt
 @app.route("/text/<page>")
 def text(page):
-	with open(os.path.join(APP_STATIC, 'text/' + page + '.txt'), 'r',) as file:
+	with open(os.path.join(APP_STATIC, 'text/' + page + '.txt'), 'r',errors='ignore') as file:
 		data=file.read()
 	return render_template("text.html", page=page, data=data)
 

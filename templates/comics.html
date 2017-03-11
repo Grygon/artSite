@@ -14,9 +14,20 @@
 </div>
 {% endif %}
 
-
-<div class=viewer>
-	<img id="mainImg" src="{{images[num-1]}}" >
+<div class=imgBrowser>
+	<a class=lArrow href={{url_for("comics",page=page,num=num-1)}}>
+	{% if num != 1 %}
+		<img src="{{url_for('static',filename='images/arrow_b.png')}}">
+	{% endif %}
+	</a>
+	<div class=viewer>
+		<img id="mainImg" src="{{images[num-1]}}" >
+	</div>
+	<a class=rArrow href={{url_for("comics",page=page,num=num+1)}}>
+	{% if num != images|length %}
+		<img src="{{url_for('static',filename='images/arrow_f.png')}}">
+	{% endif %}
+	</a>
 </div>
 
 <div class="tiles image-link"> 
