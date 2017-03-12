@@ -11,7 +11,9 @@
 <div class="imageBox">
 	{% for f in d %}
 	<div class="image">
-		<img src="{{f}}">
+		<a href="{{f}}" class="modal">
+			<img src="{{f}}">
+		</a>
 	</div>
 	{% endfor %}
 </div>
