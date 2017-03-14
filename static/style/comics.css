@@ -42,6 +42,7 @@ img#mainImg {
 	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 	align-items: center;	
 	margin-bottom:50px;
+	min-width:800px;
 }
 
 .viewer {
