@@ -1,7 +1,11 @@
 
+#content {
+	max-width:80%;
+}
+
 .text {
 	white-space: pre-wrap;
-	width:60%;
+	width:85%;
 }
 
 .imageBox {
@@ -10,6 +14,8 @@
 	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
 	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 	flex-wrap:wrap;
+	align-items:stretch;
+	width:100%
 }
 
 .image {

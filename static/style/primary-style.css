@@ -75,3 +75,7 @@ a {
 	font-size:24;
 	color:#AAA;
 }
+
+.email {
+	font-size:1em;  /* Redudant? Who's redundant? */
+}
