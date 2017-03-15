@@ -5,7 +5,9 @@ body {
 	font-family:Tahoma, Verdana, Segoe, sans-serif;
 }
 
-a {
+
+
+.Site a {
   border: 0 none;
   text-decoration: none;
 }

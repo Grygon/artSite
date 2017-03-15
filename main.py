@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, send_from_directory
 from fileAccess import APP_STATIC
 import os
 
@@ -12,10 +12,18 @@ test_images = ["http://placehold.it/1266x1800","http://placehold.it/633x900","ht
 def hello():
 	return text('letter')
 
+@app.route('/portfolio')
+def portfolio():
+	return send_from_directory("static",filename="portfolio.pdf")
+
+@app.route('/test')
+def test():
+	return "— '"
+
 # Creates a simple page with text in the "content" space. Reads from static/text/<page>.txt
 @app.route("/text/<page>")
 def text(page):
-	with open(os.path.join(APP_STATIC, 'text/' + page + '.txt'), 'r',errors='ignore') as file:
+	with open(os.path.join(APP_STATIC, 'text/' + page + '.txt'), mode='r',errors='replace',encoding='utf-8') as file:
 		data=file.read()
 	return render_template("text.html", page=page, data=data)
 
