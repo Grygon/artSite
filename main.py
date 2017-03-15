@@ -29,7 +29,11 @@ def logs():
 			log = log + ",".join(row) + "<br>"
 		return log
 
-
+# No crawling pls
+@app.route('/robots.txt')
+def robots():
+	return """User-agent: * <br>
+		Disallow: /"""
 
 # Index lands on letter of intent
 @app.route('/')
