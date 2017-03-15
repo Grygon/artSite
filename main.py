@@ -1,11 +1,35 @@
-from flask import Flask, url_for, render_template, send_from_directory
+from flask import Flask, url_for, render_template, send_from_directory, request
 from fileAccess import APP_STATIC
 import os
+from time import gmtime, asctime
+from csv import writer, reader
 
 app = Flask(__name__)
 
 # For testing purposes
 test_images = ["http://placehold.it/1266x1800","http://placehold.it/633x900","http://placehold.it/633x900","http://placehold.it/633x900","http://placehold.it/633x900"]
+
+# Log all requests in csv file. Yes csv. Yes I'm a horrible person
+@app.before_request
+def log_request():
+	ignore = ["static","log","robots.txt","favicon.ico"]
+	if request.path.split('/')[1] not in ignore:
+		with open(os.path.join(APP_STATIC,"log.csv"),"a",newline="\n") as f:
+			print(request.path.split('/')[1])
+			w = writer(f)
+			w.writerow([str(asctime(gmtime())),str(request.url),str(request.remote_addr)])
+
+
+@app.route('/log')
+def logs():
+	with open(os.path.join(APP_STATIC,"log.csv")) as f:
+		r = reader(f)
+		log = ""
+		for row in r:
+			log = log + ",".join(row) + "<br>"
+		return log
+
+
 
 # Index lands on letter of intent
 @app.route('/')
