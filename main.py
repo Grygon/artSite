@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from flask import Flask, url_for, render_template, send_from_directory, request
 from fileAccess import APP_STATIC
 import os
@@ -43,10 +46,6 @@ def hello():
 @app.route('/portfolio')
 def portfolio():
 	return send_from_directory("static",filename="portfolio.pdf")
-
-@app.route('/test')
-def test():
-	return "— '"
 
 # Creates a simple page with text in the "content" space. Reads from static/text/<page>.txt
 @app.route("/text/<page>")
